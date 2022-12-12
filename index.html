@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=S, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>Responsive Hamburger Menu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+   <nav>
+    <img class="logo" src="logo.png" alt="Logo Victoria Plewiska">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfoli</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </button>
+   </nav> 
+
+   <script>
+    const mobileNav = document.querySelector('ul');
+    const burgerIcon = document.querySelector('.burger');
+
+    burgerIcon.addEventListener('click', function() {
+        mobileNav.classList.toggle('active');
+        burgerIcon.classList.toggle('active');
+    })
+   </script>
 </body>
 </html>
